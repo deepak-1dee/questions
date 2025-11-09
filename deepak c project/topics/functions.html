@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>functions - C Programs</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <h1>functions</h1>
+
+  <!-- Example question structure -->
+  <!-- You can copy this block and add as many as you want later -->
+  
+  <div class="question">
+    <h3>1 Write a program to enter 2 number from the users add them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user add them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user add them and display the answer ?</h3>
+    <button onclick="toggleCode('q1')">Show/Hide Code</button>
+    <pre id="q1">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+
+int input1() {
+int x;
+printf("Enter the number: ");
+scanf("%d", &x);
+return x;
+}
+
+void output1(int r) {
+printf("%d", r);
+}
+
+void add1() {
+int x, y, z;
+x = input1();
+y = input1();
+z = x + y;
+output1(z);
+}
+
+void sub1() {
+int x, y, z;
+x = input1();
+y = input1();
+z = x - y;
+output1(z);
+}
+
+void main1() {
+clrscr();
+printf("Addition\n");
+add1();
+printf("\nSubtraction\n");
+sub1();
+}
+
+
+    </pre>
+  </div>
+  <div class="question">
+  <h3>2. Write a program to enter 10 number from the user add the number and display the answer ?</h3>
+  <button onclick="toggleCode('q2')">Show/Hide Code</button>
+  <pre id="q2">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+int num2() {
+int x;
+scanf("%d", &x);
+return x;
+}
+
+void main2() {
+int i, nums[10];
+clrscr();
+for (i = 0; i <= 9; i++) {
+printf("Enter number %d: ", i + 1);
+nums[i] = num2();
+}
+int sum = 0;
+for (i = 0; i <= 9; i++) {
+sum += nums[i];
+}
+printf("\nTotal of 10 numbers = %d\n", sum);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>3.Write a program to return an array from function ?</h3>
+  <button onclick="toggleCode('q3')">Show/Hide Code</button>
+  <pre id="q3">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+char fun3(int i) {
+char array[10];
+int x;
+for (x = 0; x <= 9; x++) {
+array[x] = x + 1;
+}
+return array[i];
+}
+
+void main3() {
+int i;
+char array[10];
+clrscr();
+for (i = 0; i <= 9; i++) {
+array[i] = fun3(i);
+}
+for (i = 0; i <= 9; i++) {
+printf("Number %d: %d\n", i + 1, array[i]);
+}
+}
+
+
+  </pre>
+</div>
+<div class="question">
+  <h3>4.Making following program using local and global variable ? Factorial , Reverse , Palindrome , Prime numbers, Armstrong , Fibonacci</h3>
+  <button onclick="toggleCode('q4')">Show/Hide Code</button>
+  <pre id="q4">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+int global_num4;
+
+void factorial4() {
+int i, fact = 1;
+for (i = 1; i <= global_num4; i++)
+fact *= i;
+printf("Factorial of %d = %d\n", global_num4, fact);
+}
+
+void reverse4() {
+int rev = 0, temp = global_num4;
+while (temp != 0) {
+rev = rev * 10 + temp % 10;
+temp /= 10;
+}
+printf("Reverse of %d = %d\n", global_num4, rev);
+}
+
+void palindrome4() {
+int rev = 0, temp = global_num4;
+while (temp != 0) {
+rev = rev * 10 + temp % 10;
+temp /= 10;
+}
+if (rev == global_num4)
+printf("%d is a palindrome\n", global_num4);
+else
+printf("%d is not a palindrome\n", global_num4);
+}
+
+void prime4() {
+int i, flag = 0;
+for (i = 2; i <= global_num4 / 2; i++) {
+if (global_num4 % i == 0) {
+flag = 1;
+break;
+}
+}
+if (global_num4 <= 1)
+printf("%d is not a prime number\n", global_num4);
+else if (flag == 0)
+printf("%d is a prime number\n", global_num4);
+else
+printf("%d is not a prime number\n", global_num4);
+}
+
+void armstrong4() {
+int temp = global_num4, sum = 0, rem, digits = 0;
+while (temp != 0) {
+digits++;
+temp /= 10;
+}
+temp = global_num4;
+while (temp != 0) {
+rem = temp % 10;
+sum += pow(rem, digits);
+temp /= 10;
+}
+if (sum == global_num4)
+printf("%d is an Armstrong number\n", global_num4);
+else
+printf("%d is not an Armstrong number\n", global_num4);
+}
+
+void fibonacci4() {
+int i, t1 = 0, t2 = 1, next;
+printf("Fibonacci series up to %d terms: ", global_num4);
+for (i = 1; i <= global_num4; i++) {
+printf("%d ", t1);
+next = t1 + t2;
+t1 = t2;
+t2 = next;
+}
+printf("\n");
+}
+
+void main4() {
+global_num4 = 5;
+factorial4();
+reverse4();
+palindrome4();
+prime4();
+armstrong4();
+fibonacci4();
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>5.Swap numbers using Call by address ?</h3>
+  <button onclick="toggleCode('q5')">Show/Hide Code</button>
+  <pre id="q5">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+int power5(int n, int p) {
+int x = 1, i;
+for (i = 0; i < p; i++)
+x *= n;
+return x;
+}
+
+void main5() {
+int n, p, res;
+clrscr();
+printf("Enter base: ");
+scanf("%d", &n);
+printf("Enter exponent: ");
+scanf("%d", &p);
+res = power5(n, p);
+printf("Result = %d\n", res);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>6.Swap numbers using Call by function ?</h3>
+  <button onclick="toggleCode('q6')">Show/Hide Code</button>
+  <pre id="q6">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void swap_address6(int *a, int *b) {
+int temp = *a;
+*a = *b;
+*b = temp;
+}
+
+void main6() {
+int x = 10, y = 20;
+printf("Before swapping: x=%d, y=%d\n", x, y);
+swap_address6(&x, &y);
+printf("After swapping: x=%d, y=%d\n", x, y);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>7.Make function for find out power of number, enter the number and power from user ?</h3>
+  <button onclick="toggleCode('q7')">Show/Hide Code</button>
+  <pre id="q7">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+int cube7(int n) {
+int x = 1, i;
+for (i = 0; i < 3; i++)
+x *= n;
+return x;
+}
+
+void main7() {
+int n, res;
+clrscr();
+printf("Enter number: ");
+scanf("%d", &n);
+res = cube7(n);
+printf("Cube = %d\n", res);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>8.Make function for find out Cube a user entered number ?"</h3>
+  <button onclick="toggleCode('q8')">Show/Hide Code</button>
+  <pre id="q8">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void swap_function8(int a, int b, int *x, int *y) {
+int temp = a;
+a = b;
+b = temp;
+*x = a;
+*y = b;
+}
+
+void main8() {
+int a = 15, b = 25;
+printf("Before swapping: a=%d, b=%d\n", a, b);
+swap_function8(a, b, &a, &b);
+printf("After swapping: a=%d, b=%d\n", a, b);
+}
+
+  </pre>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

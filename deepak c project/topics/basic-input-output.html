@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Input Output - C Programs</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <h1>basic-input-output</h1>
+
+  <!-- Example question structure -->
+  <!-- You can copy this block and add as many as you want later -->
+  
+  <div class="question">
+    <h3>1. Write a program to print the message: Today I made my first C Program.</h3>
+    <button onclick="toggleCode('q1')">Show/Hide Code</button>
+    <pre id="q1">
+#include &lt;stdio.h&gt;
+int main() {
+    printf("today i made my first c program");
+    return 0;
+}
+    </pre>
+  </div>
+<div class="question">
+<h3>2. Write a program to read a character from the keyboard and display it on the screen.</h3>
+  <button onclick="toggleCode('q2')">Show/Hide Code</button>
+  <pre id="q2">
+#include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+void main(){
+char x;
+clrscr();
+printf("Enter your character here: ");
+x=getch();
+printf("%c",x);
+printf("\nYour Character is %c",x);
+}
+
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>3.Write a program to read only 4 characters from the keyboard and display it on the screen in a separate line</h3>
+  <button onclick="toggleCode('q3')">Show/Hide Code</button>
+  <pre id="q3">
+#include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main(){
+char a,b,c,d;
+clrscr();
+printf("Enter 4 Characters you like:- ");
+scanf("%c%c%c%c",&a,&b,&c,&d);
+printf("Here are the Characters you entered:- \n%c\n%c\n%c\n%c",a,b,c,d);
+getch();
+}
+
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>4.Write a program to print your name at center of the first line?</h3>
+  <button onclick="toggleCode('q4')">Show/Hide Code</button>
+  <pre id="q4">
+    #include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main(){
+int i;
+clrscr();
+printf("\t\t\t\t    ");
+printf("deepak");
+getch();
+}
+
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>5.Write a program to store single quote and print that variable to show single quote on output screen.</h3>
+  <button onclick="toggleCode('q5')">Show/Hide Code</button>
+  <pre id="q5">
+#include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main(){
+char x;
+clrscr();
+x='\'';
+printf("%c",x);
+getch();
+}
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>6.Write a program for printing your name on output screen but your name should blink 5 times
+</h3>
+  <button onclick="toggleCode('q6')">Show/Hide Code</button>
+  <pre id="q6">
+#include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main(){
+int i;
+Sleep(1);
+printf("deepak");
+sleep(1);
+clrscr();
+sleep(1);
+printf("deepak");
+sleep(1);
+clrscr();
+sleep(1);
+printf("deepak");
+sleep(1);
+clrscr();
+sleep(1);
+printf("deepak");
+sleep(1);
+clrscr();
+sleep(1);
+printf("deepak");
+sleep(1);
+clrscr();
+getch();
+}
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>7.Write a program to print your name at center of the first line </h3>
+  <button onclick="toggleCode('q7')">Show/Hide Code</button>
+  <pre id="q7">
+#include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main(){
+int i;
+clrscr();
+printf("\t\t\t\t    ");
+printf("deepak");
+getch();
+}
+
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>8. Write the program to display this output ? #include<stdio.h> #include<conio.h> #include<dos.h> void main () { clrscr(); printf(“hello,welcome to c”); delay(5000); }
+.</h3>
+  <button onclick="toggleCode('q8')">Show/Hide Code</button>
+  <pre id="q8">
+#include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main(){
+int i;
+clrscr();
+printf("#include<stdio.h>\n#include<conio.h> \n#include<dos.h> \nvoid main () { \nclrscr(); \nprintf(â€œhello,welcome to câ€); \ndelay(5000); \n}");
+getch();
+}
+
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>9.Write a program to print your name at the center of the page.</h3>
+  <button onclick="toggleCode('q9')">Show/Hide Code</button>
+  <pre id="q9">
+#include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main(){
+int i;
+clrscr();
+printf("\n\n\n\n\n\n\n\n\n\n\n\n");
+printf("\t\t\t\t    ");
+printf("deepak");
+getch();
+}
+
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>10.Write a program to store single quote and print that variable to show single quote on output screen ?
+</h3>
+  <button onclick="toggleCode('q10')">Show/Hide Code</button>
+  <pre id="q10">
+#include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main() {
+    char password[20];
+    int i = 0;
+    char ch;
+
+    printf("Enter password: ");
+
+    while(1) {
+        ch = getch();  // Read a single character without echo
+        if(ch == 13) { // Enter key ASCII = 13
+            break;
+        }
+        password[i] = ch;
+        i++;
+        printf("*"); // Print * instead of actual character
+    }
+    password[i] = '\0'; // Null-terminate the string
+
+    printf("\nYour password is: %s\n", password);
+}
+ 
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>11.Write a program for printing your name on output screen but your name should blink 5 time ?
+</h3>
+  <button onclick="toggleCode('q11')">Show/Hide Code</button>
+  <pre id="q11">
+    #include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main() {
+    char ch1, ch2;
+
+    printf("Enter first character: ");
+    scanf(" %c", &ch1);
+
+    printf("Enter second character: ");
+    scanf(" %c", &ch2);
+
+    printf("ASCII value of '%c' = %d\n", ch1, ch1);
+    printf("ASCII value of '%c' = %d\n", ch2, ch2);
+}
+
+  </pre>
+</div>
+    </pre>
+  </div>
+<div class="question">
+<h3>12.Enter password display like ****** ?</h3>
+  <button onclick="toggleCode('q12')">Show/Hide Code</button>
+  <pre id="q12">
+    #include  &lt;stdio.h&gt;
+ #include &lt;conio.h&gt;
+ void main() {
+    int i;
+
+    printf("ASCII characters from 0 to 127:\n");
+
+    for(i = 0; i <= 127; i++) {
+        printf("ASCII %3d = %c\n", i, i);
+    }
+}
+
+  </pre>
+</div>
+</body>
+</html>

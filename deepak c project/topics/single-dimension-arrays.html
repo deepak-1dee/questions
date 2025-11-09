@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>single-dimension-arrays - C Programs</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <h1>Single Dimension Arrays</h1>
+  
+  <div class="question">
+    <h3>1.Enter an array from user and display all the value ?</h3>
+    <button onclick="toggleCode('q1')">Show/Hide Code</button>
+    <pre id="q1">
+#include &lt;stdio.h&gt;
+void main(){
+int array[5], i;
+    printf("Q1 - Enter 5 array elements: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array[i]);
+    printf("Array elements: ");
+    for (i = 0; i < 5; i++) printf("%d ", array[i]);
+    printf("\n");
+}
+
+    </pre>
+  </div>
+  
+  <div class="question">
+  <h3>2Enter an array from user and print the array in reverse order ?</h3>
+  <button onclick="toggleCode('q2')">Show/Hide Code</button>
+  <pre id="q2">
+#include &lt;stdio.h&gt;
+void main() {
+    int array[5], i;
+    printf("Q2 - Enter 5 array elements: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array[i]);
+    printf("Array in reverse: ");
+    for (i = 4; i >= 0; i--) printf("%d ", array[i]);
+    printf("\n");
+
+}
+  </pre>
+</div>
+<div class="question">
+  <h3>3.Enter an array from user and copy the array into second array ?</h3>
+  <button onclick="toggleCode('q3')">Show/Hide Code</button>
+  <pre id="q3">
+#include &lt;stdio.h&gt;
+void main() {
+    int array1[5], array2[5], i;
+    printf("Q3 - Enter 5 elements for array1: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array1[i]);
+    for (i = 0; i < 5; i++) array2[i] = array1[i];
+    printf("Copied array2: ");
+    for (i = 0; i < 5; i++) printf("%d ", array2[i]);
+    printf("\n");
+}
+
+
+  </pre>
+</div>
+<div class="question">
+  <h3>4. Enter an array from user and copy it into another array in reverse order ?</h3>
+  <button onclick="toggleCode('q4')">Show/Hide Code</button>
+  <pre id="q4">
+#include &lt;stdio.h&gt;
+void main() {
+    int array1[5], array2[5], i;
+    printf("Q4 - Enter 5 elements for array1: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array1[i]);
+    for (i = 0; i < 5; i++) array2[i] = array1[4 - i];
+    printf("Reversed array2: ");
+    for (i = 0; i < 5; i++) printf("%d ", array2[i]);
+    printf("\n");
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>5.Enter an array from user and print the number which is even ?</h3>
+  <button onclick="toggleCode('q5')">Show/Hide Code</button>
+  <pre id="q5">
+#include &lt;stdio.h&gt;
+void main() {
+    int array[5], i;
+    printf("Q5 - Enter 5 array elements: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array[i]);
+    printf("Even numbers: ");
+    for (i = 0; i < 5; i++) if (array[i] % 2 == 0) printf("%d ", array[i]);
+    printf("\n");
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>6.Enter an array from user and print the number which is positive ?</h3>
+  <button onclick="toggleCode('q6')">Show/Hide Code</button>
+  <pre id="q6">
+#include &lt;stdio.h&gt;
+void main() {
+    int array[5], i;
+    printf("Q6 - Enter 5 array elements: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array[i]);
+    printf("Positive numbers: ");
+    for (i = 0; i < 5; i++) if (array[i] > 0) printf("%d ", array[i]);
+    printf("\n");
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>7.Enter an array from user and square all the values of array ?</h3>
+  <button onclick="toggleCode('q7')">Show/Hide Code</button>
+  <pre id="q7">
+#include &lt;stdio.h&gt;
+void main() {
+    int array[5], i;
+    printf("Q7 - Enter 5 array elements: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array[i]);
+    for (i = 0; i < 5; i++) array[i] *= array[i];
+    printf("Squared values: ");
+    for (i = 0; i < 5; i++) printf("%d ", array[i]);
+    printf("\n");
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>8.Enter 5 values of array from user and print odd number of array ?</h3>
+  <button onclick="toggleCode('q8')">Show/Hide Code</button>
+  <pre id="q8">
+#include &lt;stdio.h&gt;
+void main() {
+    int array[5], i;
+    printf("Q8 - Enter 5 array elements: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array[i]);
+    printf("Odd numbers: ");
+    for (i = 0; i < 5; i++) if (array[i] % 2 != 0) printf("%d ", array[i]);
+    printf("\n");
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>9.Enter 5 values of array from user and add all values ?</h3>
+  <button onclick="toggleCode('q9')">Show/Hide Code</button>
+  <pre id="q9">
+#include &lt;stdio.h&gt;
+void main() {
+    int array[5], i, sum = 0;
+    printf("Q9 - Enter 5 array elements: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array[i]);
+    for (i = 0; i < 5; i++) sum += array[i];
+    printf("Sum of values: %d\n", sum);
+}
+  </pre>
+</div>
+<div class="question">
+  <h3>10.Enter 5 values of array from user, enter a value from user and search this value in array, if value is found then print “found” or not then print “not found”?</h3>
+  <button onclick="toggleCode('q10')">Show/Hide Code</button>
+  <pre id="q10">
+#include &lt;stdio.h&gt;
+void main() {
+    int array[5], i, key, found = 0;
+    printf("Q10 - Enter 5 array elements: ");
+    for (i = 0; i < 5; i++) scanf("%d", &array[i]);
+    printf("Enter value to search: ");
+    scanf("%d", &key);
+    for (i = 0; i < 5; i++) if (array[i] == key) { found = 1; break; }
+    if (found) printf("Found\n"); else printf("Not Found\n");
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>11.Enter 5 values of array and sort in ascending order?</h3>
+  <button onclick="toggleCode('q11')">Show/Hide Code</button>
+  <pre id="q11">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+int arr[5],i,j,temp;
+clrscr();
+       printf("Enter 5 elements: \n");
+	for(i=0;i<5;i++)
+	{
+	scanf("%d",&arr[i]);
+	}
+for(i=0;i<5;i++)
+{ for (j=1;j<5;j++)
+  {
+    if(arr[i]>arr[j])
+    {
+    temp=arr[i];
+    arr[i]=arr[j];
+    arr[j]=temp;
+    }
+    }
+}
+printf("Array elements in ascending order: \n");
+for(i=0;i<5;i++)
+{
+printf("%d \n",arr[i]);
+}
+}
+
+
+}
+  </pre>
+</div>
+<div class="question">
+  <h3>12.Find maximum values of array?</h3>
+  <button onclick="toggleCode('q12')">Show/Hide Code</button>
+  <pre id="q12">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+int arr[5],n,i,max;
+clrscr();
+printf("Enter number of elements in array: ");
+scanf("%d",&n);
+
+       printf("Enter %d elements: \n",n);
+	for(i=0;i<n;i++)
+	{
+	scanf("%d",&arr[i]);
+	}
+
+	max=arr[0];
+	   for(i=0;i<n;i++)
+	   {
+	   if(arr[i]>max)
+	   {
+	   max=arr[i];
+	   }
+	   }
+printf("Maximum value of an array is :%d \n",max);
+}
+  </pre>
+</div>
+<div class="question">
+  <h3>13.Find the minimum value of an array?</h3>
+  <button onclick="toggleCode('q13')">Show/Hide Code</button>
+  <pre id="q13">
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+int arr[5],n,i,mini;
+clrscr();
+printf("Enter number of elements in array: ");
+scanf("%d",&n);
+
+       printf("Enter %d elements: \n",n);
+	for(i=0;i<n;i++)
+	{
+	scanf("%d",&arr[i]);
+	}
+
+	mini=arr[0];
+	   for(i=0;i<n;i++)
+	   {
+	   if(arr[i]<mini)
+	   {
+	   mini=arr[i];
+	   }
+	   }
+printf("Minimum value of an array is :%d \n",mini);
+}
+  </pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

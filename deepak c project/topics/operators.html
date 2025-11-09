@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opreators- C Programs</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <h1>Opreators</h1>
+
+  <!-- Example question structure -->
+  <!-- You can copy this block and add as many as you want later -->
+  
+  <div class="question">
+    <h3>1.Write a program to show that example of pre-increment ?</h3>
+    <button onclick="toggleCode('q1')">Show/Hide Code</button>
+    <pre id="q1">
+#include &lt;stdio.h&gt;
+void main() {
+    int a = 5;
+    int b = ++a;
+    printf("a=%d, b=%d", a, b);
+}
+
+    </pre>
+  </div>
+  
+  <div class="question">
+  <h3>2.Write a program to show that example of post-increment ?</h3>
+  <button onclick="toggleCode('q2')">Show/Hide Code</button>
+  <pre id="q2">
+#include &lt;stdio.h&gt;
+void main() {
+    int a = 5;
+    int b = a++;
+    printf("a=%d, b=%d", a, b);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>3. Write a program to show that example of pre-decrement</h3>
+  <button onclick="toggleCode('q3')">Show/Hide Code</button>
+  <pre id="q3">
+#include &lt;stdio.h&gt;
+void main() {
+    int a = 5;
+    int b = --a;
+    printf("a=%d, b=%d", a, b);
+}
+  </pre>
+</div>
+<div class="question">
+  <h3>4.Write a program to show that example of post-decrement ?</h3>
+  <button onclick="toggleCode('q4')">Show/Hide Code</button>
+  <pre id="q4">
+#include &lt;stdio.h&gt;
+void main() {
+    int a = 5;
+    int b = a--;
+    printf("a=%d, b=%d", a, b);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>5.Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer ?</h3>
+  <button onclick="toggleCode('q5')">Show/Hide Code</button>
+  <pre id="q5">
+#include &lt;stdio.h&gt;
+void main() {
+    int a,b;
+    printf("Enter two numbers for addition: ");
+    scanf("%d %d",&a,&b);
+    printf("Addition=%d\n", a+b);
+
+    printf("Enter two numbers for subtraction: ");
+    scanf("%d %d",&a,&b);
+    printf("Subtraction=%d\n", a-b);
+
+    printf("Enter two numbers for multiplication: ");
+    scanf("%d %d",&a,&b);
+    printf("Multiplication=%d\n", a*b);
+
+    printf("Enter two numbers for division: ");
+    scanf("%d %d",&a,&b);
+    printf("Division=%d\n", a/b);
+
+    printf("Enter two numbers for remainder: ");
+    scanf("%d %d",&a,&b);
+    printf("Remainder=%d\n", a%b);
+}
+  </pre>
+</div>
+<div class="question">
+  <h3>6.Write a program to enter a number from the user ,the length of the number is depend on the user ,programmer should print the last digit of number ?</h3>
+  <button onclick="toggleCode('q6')">Show/Hide Code</button>
+  <pre id="q6">
+#include &lt;stdio.h&gt;
+void main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Last digit: %d", num%10);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>7.Enter a decimal number from the user (float) and print the right hand side of the decimal point ?</h3>
+  <button onclick="toggleCode('q7')">Show/Hide Code</button>
+  <pre id="q7">
+#include &lt;stdio.h&gt;
+void main() {
+    float num;
+    int rhs;
+    printf("Enter a decimal number: ");
+    scanf("%f", &num);
+    rhs = (num - (int)num) * 100000; // up to 5 decimal places
+    printf("Right-hand side: %d", rhs);
+}
+
+
+  </pre>
+</div>
+<div class="question">
+  <h3>8.Enter a number from user and find out cube of numbers ? </h3>
+  <button onclick="toggleCode('q8')">Show/Hide Code</button>
+  <pre id="q8">
+#include &lt;stdio.h&gt;
+void main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Cube: %d", num*num*num);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>9.Enter float number from user and round of the number ?</h3>
+  <button onclick="toggleCode('q9')">Show/Hide Code</button>
+  <pre id="q9">
+#include &lt;stdio.h&gt;
+void main() {
+    float num;
+    printf("Enter a float number: ");
+    scanf("%f", &num);
+    printf("Rounded: %d", (int)(num + 0.5));
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>10. Enter a lower case character from user and print it into upper case ?</h3>
+  <button onclick="toggleCode('q10')">Show/Hide Code</button>
+  <pre id="q10">
+#include &lt;stdio.h&gt;
+void main() {
+    char ch;
+    printf("Enter a lowercase character: ");
+    scanf(" %c", &ch);
+    printf("Uppercase: %c", ch-32);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>11.Enter marks of students and calculate average of student’s marks ?</h3>
+  <button onclick="toggleCode('q11')">Show/Hide Code</button>
+  <pre id="q11">
+#include &lt;stdio.h&gt;
+void main() {
+    int n, i, marks, sum=0;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    for(i=1;i<=n;i++){
+        printf("Enter marks of student %d: ", i);
+        scanf("%d",&marks);
+        sum += marks;
+    }
+    printf("Average marks: %.2f", (float)sum/n);
+}
+
+  </pre>
+</div>
+<div class="question">
+  <h3>12.Calculate simple interest = (P x R x T)/ 100</h3>
+  <button onclick="toggleCode('q12')">Show/Hide Code</button>
+  <pre id="q12">
+#include &lt;stdio.h&gt;
+void main() {
+    float P, R, T, SI;
+    printf("Enter Principal, Rate, Time: ");
+    scanf("%f %f %f",&P,&R,&T);
+    SI = (P*R*T)/100;
+    printf("Simple Interest: %.2f", SI);
+}
+
+  </pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
